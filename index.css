@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('Images/bg.jpg');
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.icons {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 0 5px;
+}
+
+#myProgressBar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 8px;
+    border-radius: 5px;
+    background: lightgray;
+    cursor: pointer;
+}
+
+/* Change the color of the progress indicator */
+#myProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    cursor: pointer;
+}
+
+#myProgressBar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%; 
+    background: goldenrod;
+    cursor: pointer; 
+}
+
+#myProgressBar::-ms-thumb {
+    width: 16px;
+    height: 16px; 
+    border-radius: 50%;
+    background: goldenrod;
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    padding: 0 10px;
+}
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp {
+    display: flex;
+    align-items: center;
+}
+
+.songlistplay {
+    display: flex;
+    align-items: center;
+}
+
+.timestamp i {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.songInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.songInfo img {
+    opacity: 0;
+    width: 30px;
+    margin-right: 10px;
+}
+
+#masterSongName {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+        background-color: lightgreen;
+    }
+
+    .bottom {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .songInfo {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    #masterSongName {
+        max-width: calc(100% - 50px);
+    }
+
+    #myProgressBar {
+        width: 90%;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #masterSongName {
+        text-align: left; 
+        white-space: normal; 
+        font-size: 0.9rem;
+    }
+}
+
